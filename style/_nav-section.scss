@@ -1,0 +1,107 @@
+@import "./colors";
+@import "./utilies";
+@import "./media-queries";
+
+#nav-section{
+    
+    color: $text-primary-color;
+    @include flexCenter;
+    height: 6rem;
+    width: 100%;
+  
+    .nav-container{
+        @include flexCenter;
+        gap: 1rem;
+        width: 100%;
+
+        @include intermediate{
+            flex-direction: column;
+            margin: 5px 0 5px 0;
+        }
+
+       
+
+        #logo{
+            height: 60px;
+            margin-left: 1em;
+            margin-right: 1em;
+
+            @include intermediate{
+                margin-top: 20px;
+                height: 50px;
+            }
+        }
+
+        .our-courses{
+            @include flexCenter;
+            text-decoration: none;
+            list-style: none;
+            gap: 2rem;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+
+            @include intermediate{
+                display: none;;
+            }
+
+
+            li:hover{
+                color: $discount-color;
+            }
+
+            a{
+                text-decoration: none;
+                color: $text-primary-color;
+            }
+        }
+
+        .btn-and-menu{
+            @include flexCenter;
+            padding: 0 1rem 0 1rem;
+            gap: 0.5rem;
+
+            @include intermediate{
+                align-items: end;
+                justify-content: end;
+                width: 100%;
+            }
+
+            @include mobile{
+                align-items: center;
+                justify-content: center;
+            }
+
+
+            .btn-signin{
+                margin-left: 3rem;
+                border-radius: 20px;
+                padding: 10px;
+                font-weight: bold;
+                width: 100px;
+                background: $text-primary-color;
+                transition: all 0.7s ease;
+                cursor: pointer;
+    
+                &:hover{
+                    background: $discount-color;
+    
+                }
+            }
+    
+            .bx-menu{
+                display: none;
+                font-size: 35px;
+                cursor: pointer;
+    
+                @include intermediate{
+                    display: block;
+                }
+            }
+        }
+
+       
+
+    }
+
+}

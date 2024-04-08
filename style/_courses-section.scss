@@ -1,0 +1,175 @@
+@import "./colors";
+@import "./utilies";
+@import "./media-queries";
+
+#courses-section{
+    margin-top: 160px;
+    @include flexCenter;
+    text-align: center;
+
+
+    .courses-subtitle{
+        color: $text-primary-color;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+
+      
+    }
+
+    .courses-title{
+        color: $btn-primary-color;
+        font-size: 2.5rem;
+
+        @include mobile{
+            font-size: 1.5rem;
+            text-align: center
+        }
+
+        @include tablet{
+            font-size: 1.5rem
+
+        }
+    }
+
+    .plan-option{
+        @include flexCenter;
+        gap: 5rem;
+        margin-top: 60px;
+        margin-bottom: 60px;
+
+        @include intermediate-big{
+            flex-direction: column;
+        }
+
+        .plan-details{
+            width: 500px;
+            height: 600px;
+            border-radius: 30px;
+            
+            @include tablet{
+                height: 90vh;
+                width: 80vw;
+            }
+
+            @include mobile{
+                width: 250px;
+                height: 98vh;
+            }
+
+
+
+            h5{
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+
+            .ad-details{
+                margin-top: 5rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding-left: 20px;
+
+
+                &-option{
+                    font-size: 15px;
+                    @include flexCenter;
+
+                    i{
+                        color: $btn-primary-color;
+                        font-size: 35px;
+
+                    }
+
+                    .left-span{
+                        font-weight: bold;
+                    }
+                }
+            }
+          
+        }
+        
+        .plan-ad{
+            @include flexCenter;
+            margin-top: 50px;
+            gap: 20px;
+
+            @include mobile{
+                flex-direction: column;
+            }
+
+            i{
+                background-color: $btn-primary-color;
+                font-size: 60px;
+                border-radius: 20px;
+                padding: 5px;
+
+                @include tablet{
+                    font-size: 3em;
+                }
+            }
+
+            .icon-slogan{
+                background-color: $discount-color;
+                padding: 10px;
+                border-radius: 10px;
+                color: $text-primary-color;
+            }
+        }
+
+        .left-plan{
+            background-color: $left-ad-bg-color;
+            border: none;
+
+            .left-ad-btn{
+                background: $bg-color;
+                color: $text-primary-color;
+            }
+        }
+
+        .right-plan{
+            background-color: transparent;
+            border: 3px solid $btn-primary-color;
+            color: $text-primary-color;
+            
+            .right-ad{
+                i{
+                    color: $bg-color;
+                }
+            }
+
+            .right-ad-btn{
+                background: $btn-primary-color;
+                
+            }
+        }
+
+        .btn-ad{
+            margin-top: 50px;
+            height: 60px;
+            width: 65%;
+            border-radius: 30px;
+            padding: 10px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            cursor: pointer;
+
+            @include tablet{
+                width: 70vw;
+            }
+
+            @include mobile{
+                font-size: 1rem;
+            }
+
+
+            &:hover{
+                background-color: $discount-color;
+                transform: translate(0, -15px);
+                color: $text-primary-color;
+                transition: all 0.5s;
+            }
+        }
+    }
+}

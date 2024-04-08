@@ -1,0 +1,11 @@
+@import "./colors";
+@import "./utilies";
+
+#footer-section{
+    @include flexCenter;
+    margin-bottom: 20px;
+    .footer-container{
+        color: $text-primary-color;
+        padding: 20px;
+    }
+}

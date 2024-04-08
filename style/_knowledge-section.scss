@@ -1,0 +1,125 @@
+@import "./colors";
+@import "./utilies";
+@import "./media-queries";
+
+#knowledge-section{
+    background: linear-gradient( $bg-color, black ,$bg-color);
+    color: $text-primary-color;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 20px;
+
+    .knowledge-container{
+    @include flexCenter;
+    gap: 20px;
+
+    @include tablet{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+        &-left-info{
+            width: 50vw;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            @include tablet{
+                width: 80vw;
+            }
+            .knowledge-title{
+                color: $btn-primary-color;
+                font-size: 1.7rem;
+            }
+        }
+
+        &-right-info{
+            @include flexCenter;
+            flex-direction: column;
+            width: 50ww;
+
+            @include mobile{
+                width: 80vw;
+            }
+            .graphic-knowledge-info{
+
+
+                .graphic-info{
+                    @include flexCenter;
+                    justify-content: left;
+                    gap: 15px;
+
+                    @include tablet{
+                        flex-direction: column;
+                    }
+
+                    @include tablet{
+                        margin-bottom: 30px;
+                        border: 1px solid white;
+                        padding: 15px;
+                        border-radius: 50px;
+                        text-align: center;
+                    }
+                }
+                
+
+                // blue info
+                .blue-info{
+
+   
+                    .blue-color{
+                        width: 18px;
+                        height: 18px;
+                        background-color: #4003ca;
+                        border-radius: 50px;
+
+                        @include mobile{
+                            width: 50px;
+                        }
+                        
+                    }
+
+                }
+
+                // light-blue info 
+
+                .light-blue-info{
+
+  
+
+                    .light-blue-color{
+                        width: 18px;
+                        height: 18px;
+                        background-color: #33ffd9;
+                        border-radius: 50px;
+
+                        @include mobile{
+                            width: 50px;
+                        }
+
+                    }
+                }
+
+                // magenta info 
+
+                .magenta-info{
+
+      
+                    .magenta-color{
+                        width: 18px;
+                        height: 18px;
+                        background-color: #ff0076;
+                        border-radius: 50px;
+
+                        @include mobile{
+                            width: 50px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+}

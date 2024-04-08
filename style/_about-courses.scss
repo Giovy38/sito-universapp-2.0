@@ -1,0 +1,181 @@
+@import "./colors";
+@import "./utilies";
+@import "./media-queries";
+
+#about-courses{
+    @include flexCenter;
+    width: 100wh;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 15px;
+    .about-courses-container{
+        .title-container{
+            @include flexCenter;
+            .about-courses-title{
+                color: $btn-primary-color;
+                text-transform: capitalize;
+                font-size: 2.5rem;
+                margin-bottom: 35px;
+
+
+
+                @include intermediate{
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        // chart content
+
+        .chart-container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            border: 3px solid $btn-primary-color;
+            max-width: 80vw;
+            border-radius: 0 30px 0 30px;
+
+            @include mobile {
+            grid-template-columns: repeat(3,1fr);
+
+            #child-1{
+                grid-column: 1 / 5;
+            }
+
+            #child-5{
+                grid-column: 1/ 5;
+                
+            }
+
+            #child-9{
+                grid-column: 1/5;
+            }
+
+            #child-13{
+                grid-column: 1/5;
+            }
+
+            #child-17{
+                grid-column: 1/5;
+            }
+
+            #child-21{
+                grid-column: 1/5;
+            }
+
+            #child-25{
+                grid-column: 1/5;
+            }
+
+            #child-29{
+                grid-column: 1/5;
+            }
+
+            #child-33{
+                grid-column: 1/5;
+            }
+
+            #child-37{
+                grid-column: 1/5;
+            }
+
+            }
+
+           
+
+            .chart-child{
+                @include flexCenter;
+                color: $text-primary-color;
+                padding: 5px;
+                text-align: left;
+                border: 1px solid $text-primary-color;
+                height: 70px;
+
+                @include mobile{
+                    border: none;
+                }
+
+                @include intermediate{
+                    border: none;
+                }
+
+                h4{
+
+                    @include intermediate-big{
+                        font-size: 0.7rem;
+
+                    }
+                    @include mobile{
+                        font-size: 0.5rem;
+                        text-align: center;
+                    }
+
+                    @include intermediate{
+                        font-size: 0.5rem;
+                    }
+                }
+
+                .chart-check-img{
+                    width: 20px;
+
+                    @include mobile{
+                        width: 0.5rem;
+                    }
+                }
+
+                .uni-text{
+                    color: $btn-primary-color;
+                    font-weight: bold;
+                }
+            }
+
+            // adjusting angle border
+
+            .no-border{
+                border: none;
+            }
+
+            .no-l-t-border{
+                border-left: none;
+                border-top: none;
+            }
+
+            .no-t-border{
+                border-top: none;
+            }
+
+            .no-t-r-border{
+                border-top: none;
+                border-right: none;
+            }
+
+            .no-l-border{
+                border-left: none;
+            }
+            
+            .no-r-border{
+                border-right: none;
+            }
+
+            .no-l-b-border{
+                border-left: none;
+                border-bottom: none;
+            }
+
+            .no-r-b-border{
+                border-right: none;
+                border-bottom: none;
+            }
+
+            .no-b-border{
+                border-bottom: none;
+
+            }
+
+
+
+
+           
+        }
+    }
+}
+

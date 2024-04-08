@@ -1,0 +1,25 @@
+@import "./discount-section";
+@import "./nav-section";
+@import "./hero-section";
+@import "./courses-section";
+@import "./feedback-section";
+@import "./about-courses";
+@import "./knowledge-section";
+@import "./ai-section";
+@import "./join-us-section";
+@import "./footer";
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: $bg-color;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+    width: 100vw;
+}

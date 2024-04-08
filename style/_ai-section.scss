@@ -1,0 +1,108 @@
+@import "./colors";
+@import "./utilies";
+@import "./media-queries";
+
+#ai-section{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    @include flexCenter;
+    flex-direction: column;
+
+    .ai-section-title{
+        color: $btn-primary-color;
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+
+        @include intermediate-big {
+            font-size: 1rem;
+            padding: 20px;
+        }
+
+        .ai-title{
+            text-transform: uppercase
+        }
+
+        // adding ** before and after ai-title
+
+        .ai-title::before{
+            content: '*';
+        }
+
+        .ai-title::after{
+            content: '*';
+        }
+
+       
+    }
+
+    .ai-section-container{
+        @include flexCenter;
+
+        @include intermediate {
+            flex-direction: column;
+        }
+
+
+        &-left{
+            width: 50vw;
+            @include flexCenter;
+            flex-direction: column;
+            gap: 20px;
+            
+
+            .left-title{
+                color: $btn-primary-color;
+                font-size: 1.5rem;
+                font-weight: bold;
+
+                @include intermediate {
+                    font-size: 1rem;
+                    text-align: center;
+                }
+            }
+
+            .left-details{
+                color: $text-primary-color;
+                font-size: 1.2rem;
+                text-align: center;
+            }
+
+            .ai-subtitle{
+                color: $text-primary-color;
+                font-size: 1.5rem;
+
+                @include mobile{
+                    text-align: center;
+                }
+
+                .free-text{
+                    text-transform: uppercase;
+                    color: $btn-primary-color;
+                }
+            }
+
+
+        }
+
+        &-right{
+            width: 30vw;
+            @include flexCenter;
+
+           .ai-img{
+            width: 350px;
+            margin-top: 30px;
+
+            @include intermediate-big{
+                width: 300px;
+               }
+
+               @include tablet{
+                width: 270px;
+               }
+           } 
+
+          
+        }
+      
+    }
+}
